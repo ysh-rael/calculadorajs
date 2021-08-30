@@ -1,44 +1,49 @@
-<!DOCTYPE HTML>
-<html lang=”pt-br”>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<meta charset=”UTF-8”>
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<title>Calculadora</title>
+    <meta charset="utf-8">
+    <title>calculadora</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <form class="calc" name="calculadora">
-        <div id="botoesCalc">
-            <input type="text" id="tela" name="tela" readonly>
-            <div id="linhaUm">
-                <input type="button" value="C" class="botao" onclick="limparTela()">
-                <input type="button" value="del" class="botao" onclick="deleta()">
-                <input type="button" value=" - " class="botao" onclick="botao(value)">
-                <input type="button" value=" + " class="botao" onclick="botao(value)">
-            </div>
-            <div id="linhaDois">
-                <input type="button" value=" 1 " class="botao" onclick="botao(value)">
-                <input type="button" value=" 2 " class="botao" onclick="botao(value)">
-                <input type="button" value=" 3 " class="botao" onclick="botao(value)">
-                <input type="button" value=" / "  class="botao"onclick="botao(value)">
-            </div>  
-            <div id="linhaTres">
-                <input type="button" value=" 4 " class="botao" onclick="botao(value)">
-                <input type="button" value=" 5 " class="botao" onclick="botao(value)">
-                <input type="button" value=" 6 " class="botao" onclick="botao(value)">
-                <input type="button" value=" * " class="botao" onclick="botao(value)">
-            </div>  
-            <div id="linhaQuatro">
-                <input type="button" value=" 7 " class="botao" onclick="botao(value)">
-                <input type="button" value=" 8 " class="botao" onclick="botao(value)">
-                <input type="button" value=" 9 " class="botao" onclick="botao(value)">
-                <input type="button" value=" = " class="botao" onclick="igual()">
-            </div>
-            <div id="linhaCinco">
-                <input type="button" value=" . " class="botao" onclick="botao(value)">
-                <input type="button" value=" 0 " class="botao" onclick="botao(value)">
-            </div>  
+
+    <div id="calculadora">
+        <h1>calculadora</h1>
+
+        <div id="visor"></div>
+
+        <div id="conjutoDBotoes">
+            <nobr><button id="7" class="butao" onclick="numero(this.id)" value="7">7</button>
+                  <button id="8" class="butao" onclick="numero(this.id)" value="8">8</button>
+                  <button id="9" class="butao" onclick="numero(this.id)" value="9">9</button>
+                  <button id="-" class="operaçoes" onclick="operaçao(this.id)">-</button></nobr><br>
+            
+            
+            <nobr><button id="4" class="butao" onclick="numero(this.id)" value="4">4</button>
+                  <button id="5" class="butao" onclick="numero(this.id)" value="5">5</button>
+                  <button id="6" class="butao" onclick="numero(this.id)" value="6">6</button>
+                  <button id="+" class="operaçoes" onclick="operaçao(this.id)">+</button><br></nobr>
+            
+            
+            <nobr><button id="1" class="butao" onclick="numero(this.id)" value="1">1</button>
+                  <button id="2" class="butao" onclick="numero(this.id)" value="2">2</button>
+                  <button id="3" class="butao" onclick="numero(this.id)" value="3">3</button>
+                  <button id="/" class="operaçoes" onclick="operaçao(this.id)">/</button></nobr><br>
+            
+            
+            <nobr><button id="0" class="butao" onclick="numero(this.id)" value="0">0</button>
+                  <button id="." class="butao" onclick="numero(this.id)">.</button>
+                  <button id="=" class="butao" onclick="resultado()">=</button>
+                  <button id="*" class="operaçoes" onclick="operaçao(this.id)">x</button><br></nobr><br>
+            
+            
+                  <button id="c" class="butao" onclick="limpar()">c</button><br>
+            
         </div>
-    </form>
-    <script type="text/javascript" src="functions.js"></script>
+    </div>
+    <!-- COMPLETO E FUNCIONANDO!! -->
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
+
+<!-- o "numero(this.id)" faz com que a função numero seja acionada quando aquele botão for precionado, sem precisar fazer uma função para cada botão -->

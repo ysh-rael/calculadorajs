@@ -1,0 +1,77 @@
+ /*Olá, Bem vindo(a)! por favor, não repare na bagunça:)*/
+
+ /*não irei focar muito na aparência da calculadora e sim em suas funcionalidaddes mas deixei algumas conf. básicas de cores para posteriormente você poder customizar a seu gosto*/
+
+ * {
+            font-family: monospace; /*use font-family nos botões para eles centralizarem o conteudo dentro deles
+            usei em um atributo global por escolhas não muito tecnicas, se preferir, podes por apenas na class dos botões.*/
+}
+
+#calculadora {
+    margin: auto;
+    width: 190px;
+    background-color: rgba(29, 84, 105, 0.753);
+    display: block;
+    border-radius: 10px;
+    padding: 1% 2% 1% 2%;
+    border-top:1px solid rgb(220, 222, 223);
+    border-bottom:1px solid rgb(201, 201, 201);
+    border-left:1px solid rgb(214, 214, 214);
+    border-right:1px solid rgb(201, 201, 201);
+    box-shadow: 0px 1px 1px rgb(220, 222, 223);
+ }
+
+#visor {
+    padding: 3% 3% 3% 3%;
+    font-size: 1.5em;
+    text-align: right;
+    display: block;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    background-color: white;
+ }
+/*configua as fileiras de botões*/
+#conjutoDBotoes {
+    margin: auto;
+ }
+/*os operadores tem uma class específica para customização deles*/
+.operaçoes {
+    color:rgb(215, 215, 216);
+    margin: auto;
+    margin-left: 5.5%;
+    background-color: rgba(228, 0, 0, 0.678);
+    padding: 5%  7% 5% 7%;
+    box-shadow: 1px 1px 2px black;
+    border-top:1px solid rgb(223, 222, 222);
+    border-bottom:1px solid rgb(106, 112, 138);
+    border-left:1px solid rgb(211, 211, 211);
+    border-right:1px solid rgb(126, 126, 126);
+}
+/*quando o mouser passar por cima das operaçao*/
+.operaçoes:hover {
+    background-color: rgba(247, 8, 8, 0.863);
+    transition: 190ms;
+    animation-direction: to left;
+}
+
+.butao {
+    margin:auto;
+    margin-bottom: 3%;
+    background-color: rgb(199, 196, 196);
+    padding: 5%  7% 5% 7%;
+    box-shadow: 1px 1px 2px black;
+    border-top:1px solid rgb(253, 253, 253);
+    border-bottom:1px solid rgb(106, 112, 138);
+    border-left:1px solid rgb(255, 255, 255);
+    border-right:1px solid rgb(126, 126, 126);
+ }
+
+.butao:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+h1 {
+    color: rgb(236, 236, 236);
+    text-shadow: 1px 1px 2px rgb(37, 37, 37);
+    text-align: center;
+ }
