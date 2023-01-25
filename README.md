@@ -7,7 +7,7 @@ async function getAllFiles(_path, files) {
 
     if (!files) files = []
 
-    let listOfFiles = await fs.readdir(_path)
+    const listOfFiles = await fs.readdir(_path)
 
     for (let y in listOfFiles) {
         const stat = await fs.stat(`${_path}/${listOfFiles[y]}`)
